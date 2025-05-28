@@ -2,6 +2,7 @@ import { OnApplicationBootstrap, OnApplicationShutdown } from '@nestjs/common';
 import { randomUUID } from 'node:crypto';
 import { join } from 'path';
 import { Observable, filter, firstValueFrom, fromEvent, map } from 'rxjs';
+import { Worker } from 'node:worker_threads';
 
 export class FibonacciWorkerHost
   implements OnApplicationBootstrap, OnApplicationShutdown
